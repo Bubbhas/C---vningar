@@ -6,20 +6,26 @@ namespace shapes7k1
 {
     class Methods
     {
+        public static void AddToLista()
+        {
+            List<Shapes> ShapeList = new List<Shapes>();
+
+
+        }
+        
         public static string AskUserForInput()
         {
+
             Console.Write("Select (T)riangle, (R)ectangle, (C)ircle or (D)one: ");
             String answer = Console.ReadLine().ToLower();
             return answer;
         }
 
-        //static int AskUserForCM()
-        //{
-
-        //}
 
         public static bool CheckAnswer(string answer)
         {
+            List<Shapes> ShapeList = new List<Shapes>();
+
             if (answer.Equals("t"))
             {
                 Console.Write("Enter a base of triangle: ");
@@ -29,6 +35,7 @@ namespace shapes7k1
                 var nytriangle = new Triangle();
                 nytriangle.Bas = bas;
                 nytriangle.Höjd = höjd;
+                ShapeList.Add(nytriangle);
 
             }
             else if (answer.Equals("r"))
@@ -40,6 +47,7 @@ namespace shapes7k1
                 var nyrectangle = new Recangle();
                 nyrectangle.Bas = bas;
                 nyrectangle.Höjd = höjd;
+                ShapeList.Add(nyrectangle);
 
             }
             else if (answer.Equals("c"))
@@ -48,8 +56,8 @@ namespace shapes7k1
                 int raduis = int.Parse(Console.ReadLine());
                 var nycircle = new Circle();
                 nycircle.Radie = raduis;
+                ShapeList.Add(nycircle);
 
-                Console.WriteLine(nycircle.Radie);
             }
             else if (answer.Equals("d"))
             {
@@ -63,7 +71,10 @@ namespace shapes7k1
         public static void PrintArea()
         {
 
-            Console.WriteLine();
+            foreach (var item in )
+            {
+
+            }
 
         }
     }

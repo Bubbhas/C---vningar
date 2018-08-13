@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace shapes7k1
 {
@@ -7,18 +8,16 @@ namespace shapes7k1
         static void Main(string[] args)
         {
 
-            while (true)
+
+            Console.Write("Select (T)riangle, (R)ectangle, (C)ircle or (D)one: ");
+            String svar = Console.ReadLine().ToLower();
+
+            while (!svar.Equals("D"))
             {
                 
                 string answer = Methods.AskUserForInput();
-                if (Methods.CheckAnswer(answer))
-                    {
-                    
-                    }
-                else
-                {
-                    break;
-                }                  
+                Methods.CheckAnswer(answer);
+                              
             }
             Methods.PrintArea();
         }
