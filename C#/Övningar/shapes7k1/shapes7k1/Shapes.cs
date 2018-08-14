@@ -4,25 +4,40 @@ using System.Text;
 
 namespace shapes7k1
 {
-    public class Shapes
+    public abstract class Shapes
     {
-
+        public string Name { get; set; }
+        abstract public double CalculateArea();
     }
 
     public class Triangle : Shapes
     {
-        public int Bas { get; set; }
-        public int Höjd { get; set; }
+        public double Bas { get; set; }
+        public  double Höjd { get; set; }
+        public override double CalculateArea()
+        {
+            double area = Bas * Höjd;
+            return area;
+        }
     }
    public class Circle : Shapes
     {
-        public int Radie { get; set; }
+        public double Radie { get; set; }
+        public override double CalculateArea()
+        {
+            return Radie * Radie * Math.PI;
+        }
     }
 
     public class Recangle : Shapes
     {
-        public int Bas { get; set; }
-        public int Höjd { get; set; }
+        public double Bas { get; set; }
+        public double Höjd { get; set; }
+        public override double CalculateArea()
+        {
+            double area = Bas * Höjd;
+            return area;
+        }
     }
 
 }
