@@ -8,7 +8,7 @@ namespace böcker2i
         {
             var b1 = new Books();
 
-            b1.SetIsbn("978-3-16-148410-0");
+            b1.SetIsbn("978-3-16-148410-0dfddfdff");
             b1.SetAuthor("Kalle");
             b1.SetPages(400);
             b1.SetProductId(1234);

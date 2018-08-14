@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace böcker2i
 {
-   class Produkter
+    class Produkter
     {
         int ProductId;
 
@@ -27,15 +28,20 @@ namespace böcker2i
     }
     class Books : Produkter
     {
-      
-
         string Isbn;
         string Author;
         int Pages;
 
         public void SetIsbn(string v)
         {
-            Isbn = v;
+            if (Regex.IsMatch(v, @"^[0-9]{3}-[0-9]{1}-[0-9]{2}-[0-9]{6}-[0-9]{1}$"))
+            {
+                Isbn = v;
+            }
+             else
+            {
+                Isbn = "Felaktigt Isbn-Nummer";
+            }
         }
         public string GetIsbn()
         {
