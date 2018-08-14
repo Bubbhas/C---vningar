@@ -1,6 +1,7 @@
-[Bb]in/
+﻿[Bb]in/
 [Oo]bj/
 *.suo
+.vs
 checkpoint1/.vs/checkpoint1/v15/Server/sqlite3/storage.ide
 checkpoint1/.vs/checkpoint1/v15/Server/sqlite3/db.lock
 testmedgit/.vs/testmedgit/v15/Server/sqlite3/storage.ide-wal
