@@ -6,7 +6,6 @@ namespace Böcker1i
 {
     public class Book
     {
-
         public string Isbn { get; set; }
         public string Name { get; set; }
         public int Pages { get; set; }

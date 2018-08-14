@@ -11,9 +11,6 @@ namespace shapes7k1
             List<Shapes> ShapeList = Methods.AskUserForInput();
             Methods.PrintAllShapes(ShapeList);
 
-        }
-
-
-       
+        }  
     }
 }

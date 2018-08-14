@@ -6,7 +6,7 @@ namespace Hissapp
 {
     class Elevator
     {
-        
+
         public Elevator(string namn1, int low, int high, int start, int life)
         {
             namn = namn1;
@@ -31,16 +31,16 @@ namespace Hissapp
         public int högstaVåning { get; set; }
         public int startVåning { get; set; }
         public int tidTillUnderhåll { get; set; }
-        public string livPåHiss {get; set;}
+        public string livPåHiss { get; set; }
 
         public void LivPåHiss()
         {
             if (tidTillUnderhåll <= 0)
             {
                 livPåHiss = "av";
-            } 
+            }
         }
-    
+
         public void GoUp()
         {
             if (startVåning < högstaVåning)
@@ -50,7 +50,7 @@ namespace Hissapp
                     startVåning++;
                     tidTillUnderhåll--;
                 }
-            }      
+            }
         }
         public void GoDown()
         {
@@ -61,7 +61,7 @@ namespace Hissapp
                     startVåning--;
                     tidTillUnderhåll--;
                 }
-            } 
+            }
         }
         public string Report()
         {

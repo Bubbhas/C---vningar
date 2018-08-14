@@ -36,7 +36,6 @@ namespace shapes7k1
             Console.Write("Enter a height of rectangle: ");
             rectangle.Höjd = AskForNumber();
 
-
             return rectangle;
         }
         public static Circle AskForCircle()
