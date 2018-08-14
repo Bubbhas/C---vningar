@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Bok3i
 {
@@ -35,8 +36,16 @@ namespace Bok3i
     {
         public Book(string value, string value2)
         {
-            Author = value;
-            Isbn = value2;
+            if (Regex.IsMatch(value, @"^[0-9]{3}-[0-9]{1}-[0-9]{2}-[0-9]{6}-[0-9]{1}$"))
+            {
+                Isbn = value;
+            }
+            else
+            {
+                Isbn = "Felaktigt Isbn-Nummer";
+            }
+            Author = value2;
+            
         }
 
         public string Isbn { get; set; }

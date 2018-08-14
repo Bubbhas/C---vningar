@@ -6,10 +6,13 @@ namespace Bok3i
     {
         static void Main(string[] args)
         {
-            var b1 = new Book("XXXXXX", "Min bok");
+            Console.WriteLine("Enter Isbn number: " );
+            Console.WriteLine("Enter a Author name: ");
 
-            b1.Isbn = "978-3-16-148410-0";
-            b1.Author = "Kalle";
+            var b1 = new Book(Console.ReadLine(), Console.ReadLine());
+
+            //b1.Isbn = "978-3-16-148410-0";
+            //b1.Author = "Kalle";
             b1.NrOfPages = 400;
             b1.ProductId = 1234;
 
