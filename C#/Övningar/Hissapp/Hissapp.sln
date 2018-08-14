@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hissapp", "Hissapp\Hissapp.csproj", "{D324ADD6-5206-4B9F-98A0-C60C4B14C5A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HissTest", "HissTest\HissTest.csproj", "{1C097CC3-CDF3-4DCE-9A64-60DF02B4419D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassElevator", "ClassElevator\ClassElevator.csproj", "{FFA142B6-E820-4C63-907C-DB999E8DD030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D324ADD6-5206-4B9F-98A0-C60C4B14C5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D324ADD6-5206-4B9F-98A0-C60C4B14C5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D324ADD6-5206-4B9F-98A0-C60C4B14C5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C097CC3-CDF3-4DCE-9A64-60DF02B4419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C097CC3-CDF3-4DCE-9A64-60DF02B4419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C097CC3-CDF3-4DCE-9A64-60DF02B4419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C097CC3-CDF3-4DCE-9A64-60DF02B4419D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA142B6-E820-4C63-907C-DB999E8DD030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA142B6-E820-4C63-907C-DB999E8DD030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA142B6-E820-4C63-907C-DB999E8DD030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA142B6-E820-4C63-907C-DB999E8DD030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

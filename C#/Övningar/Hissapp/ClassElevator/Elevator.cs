@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hissapp
 {
-    class Elevator
+   public  class Elevator
     {
 
         public Elevator(string namn1, int low, int high, int start, int life)
