@@ -45,7 +45,6 @@ namespace Bok3i
                 Isbn = "Felaktigt Isbn-Nummer";
             }
             Author = value2;
-            
         }
 
         public string Isbn { get; set; }
@@ -62,17 +61,14 @@ namespace Bok3i
         {
             if (NrOfPages < 100)
             {
-
                 return "Tunn";
             }
             else if (NrOfPages < 299 && NrOfPages > 100)
             {
-
                 return "Normal";
             }
             else
             {
-
                 return "Tjock";
             }
         }
