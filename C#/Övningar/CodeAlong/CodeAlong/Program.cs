@@ -84,6 +84,9 @@ namespace CodeAlong
             Header("program som börjar efter kl 21");
             NewMethod(allShows);
 
+            Header("shitttttt");
+            allShows.Sort((a, b) => String.CompareOrdinal(a.Title, b.Title));
+
         }
 
         private static void NewMethod(List<Show> allShows)
