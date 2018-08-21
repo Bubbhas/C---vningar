@@ -11,7 +11,6 @@ namespace Pandor
             //AskForNumberAndChoose();
             PrintsMultiplication();
 
-
         }
 
         private static void PrintsMultiplication()

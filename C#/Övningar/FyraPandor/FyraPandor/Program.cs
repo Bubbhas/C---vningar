@@ -9,12 +9,25 @@ namespace FyraPandor
         static void Main(string[] args)
         {
             //Palindrome();
-            // CombineTwoLists();
+            //CombineTwoLists();
             //RotateList();
             //Fiboncacci();
             //ListWithStars();
+            //SexPandor();
+        }
 
-
+        private static void SexPandor()
+        {  
+            Console.WriteLine("skriv något");
+            string str = Console.ReadLine();
+            List<string> ordet = new List<string>();
+            foreach (var item in str.Split(' '))
+            {
+                string firstLetter = item.Substring(0, 1);
+                string restOfWord = item.Substring(1, item.Length - 1);
+                ordet.Add(restOfWord + firstLetter + "ay");
+            } 
+            Console.WriteLine("{0}", string.Join(" ", ordet));
         }
 
         private static void ListWithStars()
@@ -56,6 +69,8 @@ namespace FyraPandor
 
         private static void RotateList()
         {
+
+            Console.WriteLine("skriv något");
             List<string> listan = new List<string>();
             string str = Console.ReadLine();
             string[] list = str.Split(",");
