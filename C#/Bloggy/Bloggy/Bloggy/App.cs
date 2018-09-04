@@ -13,20 +13,21 @@ namespace Bloggy
 
         public void Run()
         {
-
             PageMainMenu();
         }
 
         private void PageMainMenu()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Välkommen till huvudmenyn!");
-
-            ShowAllBlogPost();
+            Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.WriteLine("Vad vill du göra?");
             Console.WriteLine("a) gå till huvudmenyn");
             Console.WriteLine("b) Uppdatera en blogpost");
             Console.WriteLine("c) Lägga till en tagg");
+            Console.WriteLine("d) Visa alla bloggposts");
+            Console.WriteLine("e) Visa alla tags");
 
             ConsoleKey commad = Console.ReadKey().Key;
 
@@ -35,6 +36,9 @@ namespace Bloggy
                 case ConsoleKey.A: PageMainMenu(); break;
                 case ConsoleKey.B: PageUpdatePost(); break;
                 case ConsoleKey.C: UpdateTags(); break;
+                case ConsoleKey.D: ShowAllBlogPost(); break;
+                case ConsoleKey.E: ShowAllTags(); break;
+
             }
         }
         private void UpdateTags()
@@ -92,6 +96,20 @@ namespace Bloggy
                 Console.Write(bp.Id.ToString().PadRight(5) + bp.Title.PadRight(30) + bp.Author.PadRight(30));
                 Console.WriteLine(string.Join(",", bp.Tags));
             }
+        }
+        private void ShowAllTags()
+        {
+            Console.Clear();
+            IDictionary<int, string> allTags = dataacccess.GetAllTags();
+            Console.WriteLine("TAGS");
+            Console.WriteLine();
+            foreach (KeyValuePair<int, string> tags in allTags)
+            {
+                Console.WriteLine("ID: {0}, Tagg: {1}", tags.Key, tags.Value);
+            }
+            //Console.WriteLine("Visa alla blogginlägg för denna tagg");
+            //List<BlogPost> allPost = dataacccess.GetAllBlogPostToThisTag();
+
         }
     }
 }

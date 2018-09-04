@@ -11,6 +11,7 @@ namespace Bloggy
     public class DataAccess
     {
         string conString = @"Server=(localdb)\mssqllocaldb;Database=Bloggy";
+        
 
         internal List<BlogPost> GetAllBlogPost()
         {
@@ -35,7 +36,6 @@ namespace Bloggy
 
                 while (reader.Read())
                 {
-                    
                     int id = reader.GetSqlInt32(0).Value;
 
                     if (id==lastId)
@@ -123,7 +123,33 @@ namespace Bloggy
                 bp.Author = author;
 
                 return bp;
+            }
+        }
 
+        
+
+        internal IDictionary<int, string> GetAllTags()
+        {
+           string sql = @"SELECT Id, Name From Tag";
+
+            using (SqlConnection connection = new SqlConnection(conString))
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                connection.Open();
+
+                //var result = new List<string>();
+               IDictionary<int, string> dict = new Dictionary<int, string>();
+
+               SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = reader.GetSqlInt32(0).Value;
+                    string tagName = reader.GetSqlString(1).Value;
+                    dict.Add(id, tagName);
+                    //result.Add(tagName);
+                }
+                return dict;
             }
         }
 
