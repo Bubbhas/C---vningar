@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Samrai
@@ -18,7 +19,77 @@ namespace Samrai
             //FindSamuraiWithRealName(Console.ReadLine());
             //ListAllQuotesOfType();
             //ListAllQuotesOfTypeAndSamurai();
-            ListAllBattles();
+            //ListAllBattles();
+            //AllSamuraiNameWithAlias();
+            //ListAllBattles_WithLog();
+            //ShowSamuraiInfo();
+            ShowSamuraiBattles();
+
+        }
+
+        private void ShowSamuraiBattles()
+        {
+            var dataAccess = new DataAccess();
+            string v = "Gandalf";
+            Samurai samuraiBatles =  dataAccess.GetBattlesForSamurai(v);
+            if (samuraiBatles == null)
+                Console.WriteLine("Finns ingen sådan samurai");
+            else
+            {
+                Console.WriteLine("Samurai " + v + " is participating in the following battles");
+                Console.WriteLine();
+                Console.WriteLine("Id".PadRight(30) + "Name");
+                foreach (var item in samuraiBatles.SamuraiBattle)
+                {
+                    Console.WriteLine(item.BattleId +"".PadRight(30) + item.Battle.Name);
+                }
+            }
+           
+
+        }
+
+        private void ShowSamuraiInfo()
+        {
+            var dataAccess = new DataAccess();
+            List<SamuraiInfo> Info = dataAccess.GetSamuraiInfo();
+            foreach (var item in Info)
+            {
+                Console.WriteLine(item.Name + item.RealName + item.BattleNames);
+            }
+
+        }
+
+        private void ListAllBattles_WithLog()
+        {
+            var dataAccess = new DataAccess();
+            List<Battle> battle = dataAccess.AllBattlesWithLog(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(5), true);
+            foreach (var item in battle)
+            {
+                Console.WriteLine("Name of battle:".PadRight(50) + item.Name);
+                Console.WriteLine("Log name:".PadRight(50) + item.BattleLogs.Name);
+                foreach (var eventa in item.BattleLogs.BattleEvents.OrderBy(t=>t.StartTime))
+                {
+                    Console.WriteLine("Event:".PadRight(50) + eventa.Description + " ("/*+eventa.StartTime +"-"+eventa.EndTime+", "*/ +item.Name+")");
+
+                }
+                Console.WriteLine();
+                
+            }
+        }
+
+        private void AllSamuraiNameWithAlias()
+        {
+            var dataAccess = new DataAccess();
+            List<string> namesWithAlias = dataAccess.AllSamuraiNameWithAlias();
+            DisplayList(namesWithAlias);
+        }
+
+        private void DisplayList(List<string> namesWithAlias)
+        {
+            foreach (var item in namesWithAlias)
+            {
+                Console.WriteLine(item);
+            }
 
         }
 
@@ -28,7 +99,7 @@ namespace Samrai
             List<Battle> Battles = dataAccess.ListAllBattles(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(5), true);
             foreach (var item in Battles)
             {
-                Console.WriteLine(item.Name + item.Brutal + item.StartTime + item.EndTime);
+                Console.WriteLine(item.Name + " " + item.Brutal + " " + item.StartTime + " " + item.EndTime);
             }
         }
 

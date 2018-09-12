@@ -20,6 +20,7 @@ namespace Samrai
         {
             optionsBuilder.UseSqlServer(
               "Server = (localdb)\\mssqllocaldb; Database = EfSamurai;");
+            optionsBuilder.EnableSensitiveDataLogging();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
