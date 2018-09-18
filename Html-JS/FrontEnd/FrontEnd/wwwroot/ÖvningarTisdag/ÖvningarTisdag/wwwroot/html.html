@@ -1,0 +1,224 @@
+﻿<h1 id="rubbe">Rubrik</h1>
+
+<!--<link rel="stylesheet" href="css/plain.css">-->
+<meta charset="utf-8" />
+<h3>Enter your age:</h3>
+<input id="textruta" />
+<br />
+<h3>Enter your name:</h3>
+<input id="textruta2" />
+<br />
+<button id="knapp16">Ok</button>
+<div id="something"> </div>
+<!--<h3>Enter your age:</h3>
+<input id="textruta" />
+<br />
+<button id="knapp16">Ok</button>
+<div id="something"> </div>-->
+<!--tredje delen av del 3
+<button id="knapp14">Previous</button>
+<button id="knapp15">Next</button>
+<div id="something">hejsan</div>-->
+<!--
+andra delen av del 3
+    <button id="knapp13">Click me</button>
+<div id="something">hejsan</div>
+-->
+<!--
+Första av del 3
+<button id="knapp10">Click me</button>
+<button id="knapp11">Click me</button>
+<button id="knapp12">Click me</button>
+<br />
+<div id="something">hejsan</div>-->
+
+
+
+<script>
+
+    let knapp16 = document.getElementById("knapp16");
+
+    knapp16.addEventListener("click", () => {
+        var regex = /^[0-9]+$/;
+        if (textruta.value.match(regex)) {
+            if (textruta.value == 43 && textruta2.value == "Oscar")
+                something.innerHTML = "yeah!!";
+            else if (textruta.value <= 30)
+                something.innerHTML = "You are still young";
+            else if (textruta.value >= 30)
+                something.innerHTML = "You are really old";
+        } else
+            something.innerHTML = "bara siffror";
+    });
+
+
+        // Ange namn
+        //let knapp16 = document.getElementById("knapp16");
+
+        //knapp16.addEventListener("click", () => {
+        //    var regex =/^[0-9]+$/;
+        //    if (textruta.value.match(regex)) {
+        //        if (textruta.value <= 30)
+        //    something.innerHTML = "You are still young";
+        //    else if (textruta.value >= 30)
+        //            something.innerHTML = "You are really old";
+        //    } else
+        //        something.innerHTML = "bara siffror";
+        //});
+
+
+                //TRedje Delen
+                //something.style.height = "200px";
+                //something.style.width = "200px";
+                //something.style.border = "thick solid black";
+
+                //let knapp14 = document.getElementById("knapp14");
+                //let knapp15 = document.getElementById("knapp15");
+                //let färg = 127
+                //knapp14.addEventListener("click", () => {
+                //    färg = färg + 10
+                //    something.style.backgroundColor = "rgb("+färg+", 0,0)"
+                //});
+                //knapp15.addEventListener("click", () => {
+                //    färg = färg - 10
+                //    something.style.backgroundColor = "rgb(" + färg + ", 0,0)"
+                //});
+
+
+                    //Andra uppgiften
+                    //something.style.height = "200px";
+                    //something.style.width = "200px";
+                    //something.style.border = "thick solid black";
+                    //let knapp13 = document.getElementById("knapp13");
+                    //something.style.backgroundColor = "white"
+                    //knapp13.addEventListener("click", () => {
+                    //    if (something.style.backgroundColor == "white")
+                    //        something.style.backgroundColor = "red";
+                    //    else if (something.style.backgroundColor == "red")
+                    //        something.style.backgroundColor = "green";
+                    //    else if (something.style.backgroundColor == "green")
+                    //        something.style.backgroundColor = "blue";
+                    //    else if (something.style.backgroundColor == "blue")
+                    //        something.style.backgroundColor = "red";
+                    //});
+
+
+
+                    //Första uppgiften
+                    //let knapp10 = document.getElementById("knapp10");
+                    //let knapp11 = document.getElementById("knapp11");
+                    //let knapp12 = document.getElementById("knapp12");
+
+                    //knapp10.addEventListener("click", () => {
+                    //    something.style.height = "200px";
+                    //    something.style.width = "200px";
+                    //    something.style.backgroundColor = "red";
+                    //    something.style.border = "thick solid black";
+                    //});    knapp11.addEventListener("click", () => {
+                    //    something.style.height = "200px";
+                    //    something.style.width = "200px";
+                    //    something.style.backgroundColor = "green";
+                    //    something.style.border = "thick solid black";
+                    //});    knapp12.addEventListener("click", () => {
+                    //    something.style.height = "200px";
+                    //    something.style.width = "200px";
+                    //    something.style.backgroundColor = "blue";
+                    //    something.style.border = "thick solid black";
+                    //});
+
+</script>
+
+
+
+<!--Andra delen 2-3-->
+<!--<button id="knapp8">Visa katt</button>
+<div id="goodPlaceForCat"></div>
+<button id="knapp9">Skriv text</button>
+<input id="textruta" />
+<button id="knapp10">Skriv text utifrån textrutan</button>
+<div id="sometext">
+</div>
+
+<script>
+    /*
+    Om användaren trycker på knapp8 => visa en katt
+
+    Tips: xxxx.innerHTML = "här kan du skriva vilken htmlkod som helst"
+    */
+    let knapp8 = document.getElementById("knapp8");
+    knapp8.addEventListener("click", () => {
+        goodPlaceForCat.innerHTML = "<img src='cat.jpg' /> "
+    })
+
+    /*
+    Om användaren trycker på knapp9 => skriv en till rad "I believe you have my stapler."  till div'en "sometext"
+
+    Tips, för att utöka htmlkoden i ett element:
+
+        xxx.innerHTML = xxx.innerHTML + "nån mer htmlkod"
+    */
+    let knapp9 = document.getElementById("knapp9");
+    knapp9.addEventListener("click", () => {
+        //sometext.innerHTML = sometext.innerHTML + "I believe you have my stapler";
+        if (textruta.value == "") {
+            alert("SKRIV NÅGOT")
+        }else
+        sometext.innerHTML = textruta.value;
+    })
+
+    /* Om användaren trycker på knapp9 => skriv det som står i "textruta" i div'en "sometext"
+
+    Tips: för att plocka ut det användaren matat in i en textruta:
+        minTextruta.value
+    */
+
+</script>-->
+<!--//tvåan
+<button id="knapp5">Grön varannan gång</button>
+<button id="knapp6">Ändra knappens storlek</button>
+<button id="knapp7">För musen över mig</button>
+
+<script>
+    /*
+    Om användaren trycker på knapp5 => byt färg på rubriken till varannan gång grön och svart
+    Tips:
+        Skapa en variabel som håller koll på om texten ska vara grön eller svart
+        För att sätta en ny "styling" på ett element:
+            mittElement.style.xxxxxx = .....
+
+    */
+    let knapp5 = document.getElementById("knapp5");
+
+    knapp5.addEventListener("click", () => {
+        if (rubbe.style.color === "green")
+            rubbe.style.color = "black";
+        else
+            rubbe.style.color = "green";
+    });
+
+    /*
+        Om användaren trycker på knapp6 => öka "padding" på knappen med 10pixlar
+        Tips: skapa variabel som håller koll på paddingen
+    */
+    let knapp6 = document.getElementById("knapp6");
+    let padda = 0;
+    knapp6.addEventListener("click", () => {
+        padda = padda + 10
+        knapp6.style.padding = padda
+
+    });
+    /*
+        Om användaren för musen över knapp7 => sätt färgen till röd (och återställ till svart när användaren för musen förbi knappen)
+        Tips, kolla upp:
+            mittElement.addEventListener("mouseover" ... )
+            mittElement.addEventListener("mouseout" ... )
+    */
+    let knapp7 = document.getElementById("knapp7");
+
+    knapp7.addEventListener("mouseover", () => {
+        knapp7.style.color = "red";
+    });
+    knapp7.addEventListener("mouseout", () => {
+        knapp7.style.color = "black";
+    });
+</script>-->

@@ -1,0 +1,13 @@
+body
+{
+	font-family: arial
+}
+
+table, th, td {
+	border: 1px solid Gray;
+	border-collapse: collapse;
+	padding: 10px;
+}
+.rubrik {
+	Font-family: Times New Roman
+}
