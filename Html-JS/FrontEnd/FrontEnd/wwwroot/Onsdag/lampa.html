@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>lampa</title>
+</head>
+<body>
+    <!--
+    <button id="knapp1">Lampa1</button>
+    <button id="knapp2">Lampa2</button>
+    <button id="knapp3">Lampa3</button>
+    <br />
+    <div id="bild1">
+        <img id="släckt" src="släckt.jpg" />
+    </div>
+    <div id="bild2">
+        <img id="släckt" src="släckt.jpg" />
+    </div>
+    <div id="bild3">
+        <img id="släckt" src="släckt.jpg" />
+    </div>-->
+    <!--<div id="bild4">
+        <img id="släckt3" src="släckt.jpg" />
+    </div>
+    <div id="bild5">
+        <img id="släckt3" src="släckt.jpg" />
+    </div>-->
+    <h1>LAMPOR</h1>
+    <input id="textbox" />
+    <button id="knapp1">Lampa1</button>
+    <div id="knappar">
+
+    </div>
+    <div id="lampor">
+
+    </div>
+
+    <h3 id="current">Current bulb: 1</h3>
+    <script>
+        let svar = ""
+        let knapparna = ""
+        let knapp1 = document.getElementById("knapp1");
+        knapp1.addEventListener("click", () => {
+            let antalggr = parseInt(textbox.value)
+
+            for (var i = 1; i < antalggr + 1; i++) {
+
+                svar = svar + `<div id="bild${i}"><img id="släckt" src="släckt.jpg" /></div>`
+                knapparna = knapparna + `<button id='knapp' class="knapp">bild${i}</button>`
+            }
+            knappar.innerHTML = knapparna
+            lampor.innerHTML = svar
+
+            console.log(svar)
+            console.log(knapparna)
+
+            let knapp2 = document.getElementsByClassName("knapp"); 
+            console.log(knapp2)
+            for (let o of knapp2) {
+                o.addEventListener("click", () => {
+                    //let c = document.createElement("div");
+                    //x.className = "box";
+                    let nr = o.innerText
+                    console.log("hej" +nr)
+                    let bilda = document.getElementById(nr).innerHTML
+                    console.log(bilda)
+                    let htmlKoden = testInnerHTML(bilda)
+                    document.getElementById(nr).innerHTML = htmlKoden
+                })
+            }
+
+            function testInnerHTML(bildNr) {
+                let bild = bildNr
+                if (bild == ('<img src="tänd.jpg">'))
+                    return "<img src='släckt.jpg'/>"
+                else
+                    return "<img src='tänd.jpg'/>";
+            }
+        })
+        
+
+                                        // femman
+                                        //let knapp1 = document.getElementById("knapp1");
+                                        //knapp1.addEventListener("click", () => {
+                                        //    let bilda = document.getElementById("bild1").innerHTML
+                                        //    console.log(bilda)
+                                        //    let haj = testInnerHTML(bilda)
+                                        //    bild1.innerHTML = haj
+                                        //})
+                                        //let knapp2 = document.getElementById("knapp2");
+                                        //knapp2.addEventListener("click", () => {
+                                        //    let bilda = document.getElementById("bild2").innerHTML
+                                        //    console.log(bilda)
+                                        //    let haj = testInnerHTML(bilda)
+                                        //    bild2.innerHTML = haj
+                                        //})
+                                        //let knapp3 = document.getElementById("knapp3");
+                                        //knapp3.addEventListener("click", () => {
+                                        //    let bilda = document.getElementById("bild3").innerHTML
+                                        //    console.log(bilda)
+                                        //    let haj = testInnerHTML(bilda)
+                                        //    bild3.innerHTML = haj
+                                        //})
+                                        //function testInnerHTML(bildNr) {
+                                        //    let bild = bildNr
+                                        //    if (bild == ('<img src="tänd.jpg">'))
+                                        //        return "<img src='släckt.jpg'/>"
+                                        //    else
+                                        //        return "<img src='tänd.jpg'/>";
+                                        //}
+                                     //let knapp2 = document.getElementById("knapp");
+                                     //   knapp2.addEventListener("click", () => {
+                                     //       bild2.innerHTML = "<img src='tänd.jpg'/>";
+                                     //   })
+                                     //   let knapp3 = document.getElementById("knapp");
+                                     //   knapp3.addEventListener("click", () => {
+                                     //       bild3.innerHTML = "<img src='tänd.jpg'/>";
+                                     //   })
+
+
+                                        //let id = 1;
+                                        //let knapp1 = document.getElementById("knapp1");
+                                        //knapp1.addEventListener("click", () => {
+                                        //    document.getElementById("bild" + id).innerHTML = "<img src='tänd.jpg'/>";
+                                        //    current.innerHTML = `Current bulb: ${id}`;
+                                        //    id++;
+                                        //})
+
+
+
+                                        //let knapp2 = document.getElementById("knapp");
+                                        //knapp2.addEventListener("click", () => {
+                                        //    bild2.innerHTML = "<img src='tänd.jpg'/>";
+                                        //})
+                                        //let knapp3 = document.getElementById("knapp");
+                                        //knapp3.addEventListener("click", () => {
+                                        //    bild3.innerHTML = "<img src='tänd.jpg'/>";
+                                        //})
+
+
+
+    </script>
+</body>
+</html>

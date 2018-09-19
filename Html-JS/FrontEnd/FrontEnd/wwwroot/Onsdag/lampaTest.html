@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="main.css" rel="stylesheet" />
+    <title>lampa</title>
+</head>
+<body>
+
+    <h1>LAMPOR</h1>
+    <input id="textbox" />
+    <button id="knapp1">Generera lampa/lampor</button>
+    <div>
+        <div id="knappar" class="knapparna">
+
+        </div>
+        <div id="lampor" class="lamporna">
+
+        </div>
+    </div>
+    <script>
+
+        let bulbState = []
+        let antalLampor = 0
+
+        let knapp1 = document.getElementById("knapp1");
+        knapp1.addEventListener("click", () => {
+
+            let antalggr = parseInt(textbox.value)
+            antalLampor = antalggr
+            console.log(antalggr)
+            for (let i = 0; i < antalggr; i++) {
+                bulbState.push(false)
+                
+            }
+            console.log(bulbState)
+
+
+            let knappar = document.getElementById("knappar");
+            let lampor = document.getElementById("lampor");
+            knappar.innerText = ""
+            lampor.innerText = ""
+            for (let i = 0; i < antalLampor ; i++) {
+
+                //Bilderna
+                let newPic = document.createElement("img")
+                if (bulbState[i] == false)
+                    newPic.src="släckt.jpg"
+                else
+                    newPic.src = "tänd.jpg"
+
+                lampor.appendChild(newPic);
+
+
+                //KNAPPARNA
+                console.log(i)
+                let newButton = document.createElement("button");
+                newButton.innerText = "Knapp"
+                knappar.appendChild(newButton);
+                newButton.addEventListener("click", () => {
+                    if (bulbState[i] == false) {
+                        bulbState[i] = true
+                        newPic.src = "tänd.jpg"
+                        
+                    }
+
+                    else {
+                        bulbState[i] = false
+                        newPic.src = "släckt.jpg"
+                    }
+                    console.log(bulbState)
+                })
+            }
+        })
+                //}
+                //function fixPic(i) {
+                //    let fixingPic = document.getElementById(i).innerHTML
+                //    console.log("jaja" + fixingPic)
+                //    fixingPic.innerHTML = ""
+                //}
+                //knappar.innerHTML = `<div id="bild${i}"><img id="släckt" src="tänd.jpg" /></div>`
+                //    else
+                //lampor.innerHTML = `<div id="bild${i}"><img id="släckt" src="släckt.jpg" /></div>`
+                //let lampor = document.getElementById("lampor");
+                //let knappar = document.getElementById("knappar");
+                //let snurra = antalggr - koder.length
+                //for (let i = 0; i < snurra; i++) {
+                //    console.log("hej")
+                //    koder.push(`<img id="${i}" src="släckt.jpg"/>`)
+                //    knapparna.push(`<button id="${i}" >Knappen</button>`)
+                //}
+                //console.log("längd nu", koder.length)
+                //for (let i of koder) {
+                //    let lightbulb = document.createElement("div")
+                //    lightbulb.classList = "bulb";
+                //    lightbulb.innerHTML = i
+                //    lampor.appendChild(lightbulb)
+                //}
+                //for (let i of knapparna) {
+                //    let knapp = document.createElement("div")
+                //    knapp.classList = "knapp";
+                //    knapp.innerHTML = i
+                //    knappar.appendChild(knapp)
+                //}
+
+
+
+
+                    //let knapp1 = document.getElementById("knapp1");
+                    //knapp1.addEventListener("click", () => {
+                    //    let antalggr = parseInt(textbox.value)
+
+                    //    for (var i = 1; i < antalggr + 1; i++) {
+                    //        koder.push(`<div id="bild${i}"><img id="släckt" src="släckt.jpg" /></div>`)
+                    //        knapparna.push(`<button id='knapp' class="knapp">bild${i}</button>`)
+                    //    }
+                    //    knappar.innerHTML = knapparna
+                    //    lampor.innerHTML = svar
+
+                    //    console.log(koder)
+                    //    console.log(knapparna)
+
+
+                    //})
+
+                        //function testInnerHTML(bildNr) {
+                        //    let bild = bildNr
+                        //    if (bild == ('<img src="tänd.jpg">'))
+                        //        return "<img src='släckt.jpg'/>"
+                        //    else
+                        //        return "<img src='tänd.jpg'/>";
+                        //}
+
+
+                    //let knapp2 = document.getElementsByClassName("knapp");
+                    //console.log(knapp2)
+                    //for (let o of knapp2) {
+                    //    o.addEventListener("click", () => {
+                    //        //let c = document.createElement("div");
+                    //        //x.className = "box";
+                    //        let nr = o.innerText
+                    //        console.log("hej" + nr)
+                    //        let bilda = document.getElementById(nr).innerHTML
+                    //        console.log(bilda)
+                    //        let htmlKoden = testInnerHTML(bilda)
+                    //        document.getElementById(nr).innerHTML = htmlKoden
+                    //    })
+
+    </script>
+</body>
+</html>
