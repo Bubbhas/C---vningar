@@ -3,10 +3,16 @@ body {
     font-family: Arial;
     padding: 20px;
 }
+#buttonDiv button {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
 
 button, a, input, select, textarea {
     display: block;
     margin: 3px 0;
+    
 }
 
 input {

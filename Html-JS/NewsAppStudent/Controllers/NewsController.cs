@@ -66,6 +66,7 @@ namespace NewsApp.Controllers
             else
             {
                 news.Created = DateTime.Now;
+                news.Updated = DateTime.Now;
                 _newsRepository.Add(news);
                 return Ok(news.Id);
             }

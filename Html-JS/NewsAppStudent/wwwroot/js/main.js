@@ -39,7 +39,6 @@ async function addNews() {
     }
 }
 
-
 async function Delete(id) {
 
     let response = await fetch(`api/News/${id}`, {
@@ -87,7 +86,6 @@ async function Seed() {
             "Content-Type": "application/json"
         }
     });
-
     resetTable()
     getAll()
 }
@@ -131,8 +129,10 @@ async function resetTable() {
 
 }
 async function AddNewsFields() {
-    if (x.style.display === "none")
-    x.style.display = "block";
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        update.style.display = "none";
+    }
     else 
     x.style.display = "none";
 }
@@ -140,6 +140,7 @@ async function AddNewsFields() {
 async function ShowUpdate(id, header, intro, body, created) {
 
     if (update.style.display === "none") {
+        x.style.display = "none";
         update.style.display = "block";
         byId("UpdateId").value = id;
         byId("updateformHeader").value = header;
@@ -160,9 +161,10 @@ async function GetId(id) {
 }
 
 async function Statistics() {
-    
     if (y.style.display === "none") {
         y.style.display = "block";
+        x.style.display = "none";
+        update.style.display = "none";
         let response = await fetch("api/news/count")
         if (response.status === 200) {
             let News = await response.json();
@@ -170,8 +172,6 @@ async function Statistics() {
             Number of news: ${News}     `
         }
     } else y.style.display = "none"
-
-
 }
 
 async function recreate() {
@@ -188,7 +188,8 @@ async function recreate() {
     }
     //await response.text();
     // kolla statuskod
-
+    resetTable()
+    getAll()
 }
 function byId(id) {
     return document.getElementById(id);

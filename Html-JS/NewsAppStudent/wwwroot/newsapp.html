@@ -6,12 +6,14 @@
 </head>
 <body onpageshow="getAll()">
     <!-- recreate knapp -->
-    <button onclick="Seed()">Seed</button>
-    <button onclick="Statistics()">Statistics</button>
-    <button onclick="recreate()">Recreate</button>
-    <!-- Add news "addFormHeader"-input och knapp till "addNews" -->
-    <!--<input id="addformHeader" />-->
-    <button onclick="AddNewsFields()">Add News</button>
+    <div id="buttonDiv">
+        <button onclick="Seed()">Seed</button>
+        <button onclick="Statistics()">Statistics</button>
+        <button onclick="recreate()">Recreate</button>
+        <!-- Add news "addFormHeader"-input och knapp till "addNews" -->
+        <!--<input id="addformHeader" />-->
+        <button onclick="AddNewsFields()">Add News</button>
+    </div>
     <table id="table">
         <tr>
             <th>Id</th>
