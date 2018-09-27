@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Newsapp</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body onpageshow="getAll()">
+    <!-- recreate knapp -->
+    <button onclick="Seed()">Seed</button>
+    <button onclick="Statistics()">Statistics</button>
+    <button onclick="recreate()">Recreate</button>
+    <!-- Add news "addFormHeader"-input och knapp till "addNews" -->
+    <!--<input id="addformHeader" />-->
+    <button onclick="AddNewsFields()">Add News</button>
+    <table id="table">
+        <tr>
+            <th>Id</th>
+            <th>Header</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+    <div id="addfield">
+        <h3>Add News</h3>
+        Header: <input id="addformHeader" />
+        Intro:  <input id="addformIntro" />
+        Body:   <input id="addformBody" />
+        <button onclick="addNews()">Add</button>
+    </div>
+    <div id="uppdatefield">
+        <h3>Update News</h3>
+        Id:     <input id="UpdateId" readonly="readonly" value="" />
+        Header: <input id="updateformHeader" value="" />
+        Intro:  <input id="updateformIntro" value="" />
+        Body:   <input id="updateformBody" value="" />
+                <p hidden id="updateCreated" value="" ></p>
+        <button onclick="UpdateNews()">Add</button>
+    </div>
+
+    <div id="statistics">
+
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

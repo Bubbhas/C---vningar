@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi3</title>
+</head>
+<body>
+    <h3> Min frukostmat</h3>
+    <form method="get" action="/WebApi4/Food">
+        <!--Food: <input name="Food" />-->
+        <select name="Food">
+            <option value="Melon">Melon</option>
+            <option value="Inte Melon">Inte Melon</option>
+        </select>
+        <button>Ok</button>
+    </form>
+
+    <h3> Kvadrera</h3>
+    <form method="get" action="/WebApi4/Tal">
+        Food: <input name="Talet" pattern="\d+" />
+        <button>Ok</button>
+    </form>
+
+    <h3> listan</h3>
+    <form method="get" action="/WebApi4/Siffror">
+
+        <div class="slidecontainer">
+            <p>Default range slider:</p>
+            <input name="Siffra1" type="range" min="1" max="100" value="">
+            <input name="Siffra2" type="range" min="1" max="100" value="">
+        </div>
+
+        <!--Food: <input name="Siffra1" />
+        Food: <input name="Siffra2" />-->
+        <button>Ok</button>
+    </form>
+
+    <h3> Färg</h3>
+    <form method="get" action="/WebApi4/Color">
+        <input type="color" name="color"
+               value="" />
+        <!--Food: <input name="Color" />-->
+        <button>Ok</button>
+    </form>
+</body>
+</html>

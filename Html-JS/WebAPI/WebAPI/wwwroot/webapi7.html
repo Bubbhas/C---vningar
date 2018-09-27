@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi7</title>
+</head>
+<body>
+    <h3>Lägg till Dokument</h3>
+    <form method="get" action="/WebApi7/Dokument">
+        Titel: <input name="Titel" />
+        <br />
+        Antal sidor: <input name="Sidor" />
+        <br />
+        Sammanfattning finns <input type="checkbox" id="Sammanfattning" value="true" name="Sammanfattning">
+        <br />
+        Publiceras <input type="datetime" name="Tid" value="2018-06-12T19:30" />
+        <br />
+        Pris: <input name="Pris" />
+        <br />
+        Typ: <select name="Typ">
+            <option value="0">PDF</option>
+            <option value="1">Word</option>
+        </select>
+        <br />
+        Taggar: <br /><select multiple size=3 name="Taggar">
+            <option value="Genombrott">Genombrott</option>
+            <option value="Forskning">Forskning</option>
+            <option value="Kultur">Kultur</option>
+        </select>
+        <br />
+        Betyg:
+        <input type="radio" name="Betyg" value=1> (1)
+        <input type="radio" name="Betyg" value=2> (2)
+        <input type="radio" name="Betyg" value=3> (3)
+        <input type="radio" name="Betyg" value=4> (4)
+        <input type="radio" name="Betyg" value=5> (5)
+        <br />
+        <button>Ok</button>
+    </form>
+    <br />
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿input, button, label{
+    display: block;
+    margin: 10px;
+}
+
+.success{
+    color: green;
+}
+
+.fail {
+    color:red;
+}

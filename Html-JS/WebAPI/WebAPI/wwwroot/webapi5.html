@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi5</title>
+</head>
+<body>
+    <h3>Dela choklad</h3>
+    <form method="get" action="/WebApi5/Choklad">
+        Food: <input name="Choklad" />
+        <button>Ok</button>
+    </form>
+    <br />
+
+    <h3>Hämta order</h3>
+    <form method="get" action="/WebApi5/Order">
+        Food: <input name="Order" />
+        <button>Ok</button>
+    </form>
+    <br />
+    <h3>Slå upp användare</h3>
+    <form method="get" action="/WebApi5/Användare">
+        Food: <input name="användare" />
+        <button>Ok</button>
+    </form>
+
+    <br />
+    <h3>Light bulb</h3>
+
+    <input type="checkbox" id="lampan" name="Lampa"> Lampa<br>
+    <div id="plats"></div>
+    <button id="knapp1">Lampa1</button>
+
+    <h3>Light bulb</h3>
+
+    <input type="checkbox" id="lampan2" name="Lampa2" onclick="go()"> Lampa<br>
+    <div id="plats"></div>
+
+
+    <script>
+        function go() {
+            if (document.getElementById("lampan2").checked == true) {
+                document.getElementById("plats").innerHTML = '<img id="tänt" src="messi.jpg" />'
+            }
+            else {
+                document.getElementById("plats").innerHTML = '<img id="tänt" src="upp.jpg" />'
+            }
+        }
+        let knapp1 = document.getElementById("knapp1");
+        knapp1.addEventListener("click", () => {
+
+            if (document.getElementById("lampan").checked == true) {
+                document.getElementById("plats").innerHTML = '<img id="tänt" src="messi.jpg" />'
+            }
+            else {
+                document.getElementById("plats").innerHTML = '<img id="tänt" src="upp.jpg" />'
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>

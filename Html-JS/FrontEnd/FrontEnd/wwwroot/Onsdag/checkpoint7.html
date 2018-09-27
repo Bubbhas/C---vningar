@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>checkpoint7</title>
+</head>
+<body>
+
+        <img id="släckt" src="stangd.png" onclick="changeImage('släckt')" />
+        <img id="släckt2" src="stangd.png" onclick="changeImage('släckt2')" />
+        <img id="släckt3" src="stangd.png" onclick="changeImage('släckt3')" />
+
+    <script>
+        let bilden = document.getElementById("släckt").src
+        console.log(bilden.src)
+
+        let eggStates = ["stangd", "stangd", "stangd"];
+
+        function changeImage(bild) {
+           
+            if (document.getElementById(bild).src.endsWith("stangd.png")) {
+                document.getElementById(bild).src = "oppen.png"
+            }
+            else if (document.getElementById(bild).src == "https://localhost:44393/Onsdag/oppen.png") {
+                document.getElementById(bild).src = "https://localhost:44393/Onsdag/dubbel.png"
+            }
+            else {
+                document.getElementById(bild).src = "https://localhost:44393/Onsdag/stangd.png"
+            }
+                               
+            console.log(document.getElementById("släckt").src)
+        }
+
+    </script>
+    <style>
+        img {
+            width: 100px;
+            margin-right: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</body>
+</html>
