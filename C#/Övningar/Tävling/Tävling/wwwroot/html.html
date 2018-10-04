@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>html</title>
+</head>
+<style>
+    .inputs:focus {
+        outline: none;
+    }
+</style>
+<body>
+
+    <input class="inputs" id="input1" style="border:none "readonly="readonly" value="" />
+    <br />
+    <input id="input2" class="inputs" style="border:none" readonly="readonly" value="" />
+    <br />
+    skriv här<input onkeyup="copy()" id="input" value="" />
+    <br />
+    eller här<input id="input3" onkeyup="copy2()"  value="" />
+    <br />
+    <input id="input4" class="inputs" style="border:none" readonly="readonly" value="" />
+    <br />
+    <input class="inputs" id="input5"  style="border:none" readonly="readonly" value="" />
+    <br />
+</body>
+</html>
+<script >
+    function copy() {
+        let bokstav = document.getElementById("input").value
+        document.getElementById("input1").value = bokstav
+        document.getElementById("input2").value = bokstav
+        document.getElementById("input3").value = bokstav
+        document.getElementById("input4").value = bokstav + bokstav
+        if (bokstav === "") {
+            document.getElementById("input5").value = ""
+        }
+        else
+        document.getElementById("input5").value = "**" + bokstav.toUpperCase()+"**"
+    }
+    function copy2() {
+        let bokstav = document.getElementById("input3").value
+        document.getElementById("input1").value = bokstav
+        document.getElementById("input2").value = bokstav
+        document.getElementById("input").value = bokstav
+        document.getElementById("input4").value = bokstav + bokstav
+        if (bokstav === "") {
+            document.getElementById("input5").value = ""
+        }
+        else
+            document.getElementById("input5").value = "**" + bokstav.toUpperCase() + "**"
+    }
+    let input = document.getElementById("input");
+
+
+</script>

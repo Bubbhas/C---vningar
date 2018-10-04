@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>vue</title>
+</head>
+<style>
+    .padding {
+        padding-left: 100px;
+    }
+</style>
+<body>
+    <div id="lab4Andra">
+        <h2>Varukorg</h2>
+
+        <div v-for="p in allproducts">
+            <input type="number" min="0"  v-model.number="p.quantity" v-on:keyup="assertPositive(p)" v-on:change="assertPositive(p)"/>
+            <button v-on:click="addOne(p)">+</button>
+            <button v-on:click="subOne(p)">-</button>
+            {{p.quantity}} st
+            {{p.name}}  <a class="padding" v-if="p.quantity == 0">NOLL</a>
+            <br />
+
+        </div>
+        Antal Produkter: {{allQ}}
+        <!--<input v-model="skiftnycklar" /><button>+</button> <button>-</button>{{skiftnycklar}} st skiftnycklar<br />
+    <input v-model="hammare" /><button>+</button> <button>-</button>{{skiftnycklar}} st skiftnycklar<br />
+    <input v-model="såg" /><button>+</button> <button>-</button>{{skiftnycklar}} st skiftnycklar<br />-->
+    </div>
+
+
+    <!--<div id="lab4">
+        <h2>Varukorg</h2>
+        <input v-model="skiftnycklar" value="" /> <button v-on:click="AddToSkiftnycklar()">+</button> <button v-on:click="SubFromSkiftnycklar()">-</button>{{skiftnycklar}} st skiftnycklar <a v-if="skiftnycklar == 0">         NOLL</a><br />
+        <input v-model="hammare" /> <button v-on:click="AddTohammare()">+</button><button v-on:click="SubFromhammare()">-</button>{{hammare}} st hammare <a v-if="hammare == 0">         NOLL</a><br />
+        <input v-model="såg" /><button v-on:click="AddTosåg()">+</button><button v-on:click="SubFromsåg()">-</button> {{såg}} st sågar <a v-if="såg == 0">       NOLL</a><br />
+        <p>Antal Produkter: {{adder}}</p>
+    </div>-->
+
+
+
+
+    <!--<div id="lab3">
+        <ul>
+            <li v-for="name in myList">{{name.name}}</li>
+        </ul>
+        <ul>
+            <li v-for="name in filterListR(myList)">{{name.name}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="name in filterListM(myList)">{{name.name}}</li>
+        </ul>
+        <h2>Börjar på ett visst tecken {{bå}}</h2>
+        Ange Tecken: <input id="input" v-model="bå"  />
+        <input type="checkbox" v-model="checked" />Känslig för case
+        <ul>
+            <li v-for="name in filterList()">{{name.name}}</li>
+        </ul>
+
+        <h2>Lägg till ett namn</h2>
+        Ange ett namn: <input id="input" v-model="addName"  />
+        <button v-on:click="addNames(addName)">Ok</button>
+    </div>-->
+    <!--<div id="app">
+        <button v-on:click="counter += 1">Tryck</button>
+        <p>{{ counter }}</p>
+        <div>{{ text }}</div>
+    </div>-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="demo1.js"></script>
+</body>
+</html>

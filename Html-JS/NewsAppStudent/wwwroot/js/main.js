@@ -34,8 +34,9 @@ async function addNews() {
         } else {
             console.log("Unexpected error", await response.text());
         }
-        resetTable()
-        getAll()
+        //resetTable()
+        //getAll()
+        location.reload();
     }
 }
 
@@ -52,8 +53,9 @@ async function Delete(id) {
     } else {
         console.log("Unexpected error with the delete", response);
     }
-    resetTable()
-    getAll()
+    //resetTable()
+    //getAll()
+    location.reload();
 }
 async function Seed() {
     let response = await fetch("api/news/GetAll")
@@ -86,8 +88,9 @@ async function Seed() {
             "Content-Type": "application/json"
         }
     });
-    resetTable()
-    getAll()
+    //resetTable()
+    //getAll()
+    location.reload();
 }
 
 async function UpdateNews() {
@@ -119,19 +122,21 @@ async function UpdateNews() {
         } else {
             console.log("Unexpected error", await response.text());
     }
-    resetTable()
-        getAll()
+    //resetTable()
+        //    getAll()
+        location.reload();
     }
 }
 
 async function resetTable() {
     byId("table").innerHTML = "";
-
 }
 async function AddNewsFields() {
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.style.display = "none";
         update.style.display = "none";
+
     }
     else 
     x.style.display = "none";
@@ -141,6 +146,8 @@ async function ShowUpdate(id, header, intro, body, created) {
 
     if (update.style.display === "none") {
         x.style.display = "none";
+        y.style.display = "none";
+        
         update.style.display = "block";
         byId("UpdateId").value = id;
         byId("updateformHeader").value = header;

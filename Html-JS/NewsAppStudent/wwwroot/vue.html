@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>vue</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="newser">
+        <div id="buttonDiv">
+            <button @click="recreate()">Recreate</button>
+            <button @click="AddNewsField()">Add News</button>
+            <button @click="Seed()">Seed</button>
+            <button @click="Statistics()">Statistics</button>
+        </div>
+
+        <table id="table">
+            <tr>
+                <th>Id</th>
+                <th>Header</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tr v-for="n in newslist">
+                <td>{{n.id}}</td>
+                <td>{{n.header}}</td>
+                <td>{{n.created}}</td>
+                <td>{{n.updated}}</td>
+                <td><button @click="UpdateNewsField(n)">Update</button></td>
+                <td><button @click="Delete(n.id)">X</button></td>
+            </tr>
+        </table>
+        <div id="addfield" v-if="addOrCreate === 'add'">
+            <h3>Add News</h3>
+            Header: <input  v-model="newNews.header" />
+            Intro:  <input    v-model="newNews.intro" />
+            Body:   <input   v-model="newNews.body"/>
+            <button  @click="addNews()">Add</button>
+        </div>
+
+        <div id="uppdatefield" v-if="addOrCreate === 'create'">
+            <h3>Update News</h3>
+            Id:     <input  readonly="readonly" v-model="theNews.id" />
+            Header: <input  v-model="theNews.header" />
+            Intro:  <input v-model="theNews.intro"  />
+            Body:   <input v-model="theNews.body" />
+            <button @click="UpdateNews()">Add</button>
+        </div>
+
+    </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="/js/vue.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+﻿@model List<OnlineStore.Models.Product>
+@{
+    ViewData["Title"] = "AllProducts";
+}
+
+<h2>AllProducts</h2>
+
+
+<table>
+    <th>
+    <tr>
+        <th>
+            @if (Model.Any())
+            {
+                @Model.First().Category.Name
+            }
+
+        </th>
+    </tr>
+    </th>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            @item.Name;
+
+
+        }
+    </tbody>
+</table>
+
