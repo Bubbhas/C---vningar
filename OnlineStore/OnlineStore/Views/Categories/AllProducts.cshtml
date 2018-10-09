@@ -3,29 +3,48 @@
     ViewData["Title"] = "AllProducts";
 }
 
-<h2>AllProducts</h2>
-
-
-<table>
-    <th>
-    <tr>
-        <th>
-            @if (Model.Any())
+<h2>
+    All products with category:  @if (Model.Any())
+    {
+        @Model.First().Category.Name
+    }
+</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                   For Sale
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
             {
-                @Model.First().Category.Name
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsForSale)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
             }
-
-        </th>
-    </tr>
-    </th>
-    <tbody>
-        @foreach (var item in Model)
-        {
-
-            @item.Name;
-
-
-        }
-    </tbody>
-</table>
-
+        </tbody>
+    </table>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>

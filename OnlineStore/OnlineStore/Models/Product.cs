@@ -15,12 +15,11 @@ namespace OnlineStore.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        [Range(1, 1000)]
-        [RegularExpression(@"^[\d]+$", ErrorMessage = "Måste vara siffror")]
+        //[Range(1, 1000)]
+        [RegularExpression(@"^[\d]+.*$", ErrorMessage = "Måste vara siffror")]
         public decimal Price { get; set; }
+        public bool IsForSale { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
-
-
     }
 }

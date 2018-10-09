@@ -14,6 +14,7 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
     </environment>
 </head>
 <body>
@@ -35,6 +36,8 @@
                     <li><a asp-area="" asp-controller="FaQ" asp-action="TopFive">Top Five FaQ</a></li>
                     <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
                     <li><a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
+                    <li><a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
+                    <li><a asp-area="" asp-controller="Lab" asp-action="lab1">Lab</a></li>
 
                 </ul>
                 <partial name="_LoginPartial" />

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Farm</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+</head>
+<body>
+    <div id="checkpoint">
+        <div class="buttons">
+            <div  v-on:click="addAnimals('🐼')">🐼</div>
+            <div  v-on:click="addAnimals('🐷')">🐷</div>
+            <div v-on:click="addAnimals('🐰')">🐰</div>
+        </div>
+
+        <div class="animal" v-for="p in allanimals">
+            <div >
+                <span>{{p.name}}</span>
+            </div>
+        </div>
+
+
+
+        </div>
+        <!--<div id="app">
+
+        <div class="buttons">
+            <div>🐼</div>
+            <div>🐷</div>
+            <div>🐰</div>
+        </div>
+
+        <div class="animal">
+            <span>🐼</span>
+        </div>
+        <div class="animal">
+            <span>🐷</span>
+        </div>
+        <div class="animal" >
+            <span>🐰</span>
+        </div>
+
+    </div>-->
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+        <script src="js/main.js"></script>
+</body>
+</html>

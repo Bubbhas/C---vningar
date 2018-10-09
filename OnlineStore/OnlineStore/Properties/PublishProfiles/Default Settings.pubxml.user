@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgLtu9RaVBk+lBtkwA8MPwQAAAAACAAAAAAAQZgAAAAEAACAAAAABvBoO7QwLUAhkMSoViGqycs/tipplHUNbPOXbyfJSyAAAAAAOgAAAAAIAACAAAACR+9TOq2xzmNhczZ7jNnXo+Di1niZeuJLJOmqYOyERJSAAAABppEdf0ggiI/Wlb8CLX7e9REXYXZAjB7qsChV5ySNKjEAAAADLPE+Hres6OM+JEJiWyN+l/u50QhZJ48XQAv93SYM+YW/duZPjvtMsjuLwnttkNDCKdtTTDpRD6NpPe5U5UEst</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=SQL6006.site4now.net;Initial Catalog=DB_A41760_Bubbha8;User Id=DB_A41760_Bubbha8_admin;Password=HejHejHej1;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="OnlineStore.Data.ApplicationDbContext">
+      <Value>Data Source=SQL6006.site4now.net;Initial Catalog=DB_A41760_Bubbha8;User Id=DB_A41760_Bubbha8_admin;Password=HejHejHej1;</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

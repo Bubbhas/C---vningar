@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgLtu9RaVBk+lBtkwA8MPwQAAAAACAAAAAAAQZgAAAAEAACAAAAB7A9ky1JjciNP7Q0h8bAb4FML4keBNgiSLgeDBB/ILaQAAAAAOgAAAAAIAACAAAADTLaGzfQzDb+LiRSv9UxTQDODFpEIBftpLH2vrrA0RWCAAAABmI7r5JI918L9jTPF4YWYdDIUHzv9oqSO1emtOiXRkKkAAAAAJIfOfQ+IpwDPt7k5IoTQaVTSZdfuSuYr8mAjbk653yvfrsF4EVaM73LYjSvUfBr4cMTYH3j98jRxtNstqWNkp</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=SQL6006.site4now.net;Initial Catalog=DB_A41760_Bubbha8;User Id=DB_A41760_Bubbha8_admin;Password=HejHejHej1;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AnimalFarm.Models.DatabaseContext">
+      <Value>Data Source=SQL6006.site4now.net;Initial Catalog=DB_A41760_Bubbha8;User Id=DB_A41760_Bubbha8_admin;Password=HejHejHej1;</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

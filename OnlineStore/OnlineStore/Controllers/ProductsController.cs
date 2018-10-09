@@ -32,14 +32,12 @@ namespace OnlineStore.Controllers
             {
                 return NotFound();
             }
-
             var product = await _context.Product
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
             }
-
             return View(product);
         }
 
@@ -54,7 +52,7 @@ namespace OnlineStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,CategoryId")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Price,CategoryId,IsForSale")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +84,7 @@ namespace OnlineStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,CategoryId,IsForSale")] Product product)
         {
             if (id != product.Id)
             {

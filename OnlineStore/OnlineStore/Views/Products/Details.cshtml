@@ -1,4 +1,8 @@
-﻿@model OnlineStore.Models.Product
+﻿@using OnlineStore.Services
+@model OnlineStore.Models.Product
+
+
+@inject ViewService viewService
 
 @{
     ViewData["Title"] = "Details";
@@ -26,7 +30,13 @@
             @Html.DisplayNameFor(model => model.Category)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Category)
+            @viewService.GetSelectItem(Model.CategoryId).Name
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsForSale)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsForSale)
         </dd>
     </dl>
 </div>

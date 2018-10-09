@@ -13,6 +13,9 @@ using OnlineStore.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OnlineStore.Services;
+using OnlineStore.Filter;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 
 namespace OnlineStore
 {
@@ -21,6 +24,8 @@ namespace OnlineStore
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+
         }
 
         public IConfiguration Configuration { get; }
@@ -35,19 +40,50 @@ namespace OnlineStore
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+
+            services.AddMvc(config =>
+            {
+                config.Filters.Add(new ExceptionFilterAttribute());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
+
+
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+
             services.AddTransient<ViewService, ViewService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var enUSCulture = new CultureInfo("en-US");
+            var supportedCultures = new[]
+                {
+                    enUSCulture,
+                };
+
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(enUSCulture),
+                // Formatting numbers, dates, etc.
+                SupportedCultures = supportedCultures,
+                // UI strings that we have localized.
+                SupportedUICultures = supportedCultures
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

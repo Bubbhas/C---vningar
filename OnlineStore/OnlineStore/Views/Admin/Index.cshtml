@@ -1,0 +1,25 @@
+﻿@model OnlineStore.Models.Admin
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>Admin</h2>
+<h4>Add role for user</h4>
+
+
+<form asp-action="AddRole">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">Email</label>
+        <input asp-for="Email" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="RoleName" class="control-label">Rolename</label>
+        <input asp-for="RoleName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Ok" class="btn btn-default" />
+    </div>
+</form>

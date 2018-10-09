@@ -1,0 +1,14 @@
+URL to your site (on smarterasp.net):
+
+http://bubbha8-001-site1.ftempurl.com/
+Database server name (on smarterasp.net):
+
+sql6006.site4now.net
+DB_A41760_Bubbha8
+
+User name to log in to your database (on smarterasp.net):
+
+DB_A41760_Bubbha8_admin
+
+Password to your database (on smarterasp.net): 
+HejHejHej1

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineStore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,11 @@ namespace OnlineStore.Controllers
         }
         public IActionResult Pow()
         {
-            return View();
+            return Ok("POOOOW");
         }
         public IActionResult TopFive()
         {
+
             return View();
         }
 
@@ -26,6 +28,7 @@ namespace OnlineStore.Controllers
         {
             return Ok(17);
         }
+
      
     }
 }
