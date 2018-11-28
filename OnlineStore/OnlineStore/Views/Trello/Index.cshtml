@@ -1,0 +1,16 @@
+﻿@model List<OnlineStore.Models.RequestAllBoards.TrelloRoot>
+
+
+<h1>Alla Boards</h1>
+<div class="row">
+    <div class="col-md-4">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a asp-action="Board" asp-route-id="@item.id">@item.name</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

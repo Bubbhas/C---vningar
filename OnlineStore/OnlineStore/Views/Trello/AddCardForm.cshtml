@@ -1,0 +1,28 @@
+﻿@model OnlineStore.Models.ProductVm.AddTrelloPost
+
+<h1>Lägg till</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddCardForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrelloListId" class="control-label"></label>
+                <input asp-for="TrelloListId" class="form-control" value="@Model.TrelloListId" />
+                <span asp-validation-for="TrelloListId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddCardForm" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>

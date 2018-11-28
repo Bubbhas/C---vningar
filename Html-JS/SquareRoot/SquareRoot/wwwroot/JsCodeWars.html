@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodeWars</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="CategorizeNewMember"></div>
+
+    <script>
+        window.onload = FindTheParityOutlier;
+
+
+
+
+
+        function FindTheParityOutlier() {
+            let aa = [2, 4, 0, 100, 4, 11, 2602, 36]
+            let odd = 0
+            let oddW = 0
+            let even = 0
+            let evenW = 0
+
+            for (var i = 0; i < aa.length; i++) {
+                if (aa[i] % 2 == 0) {
+                    even++
+                    evenW = aa[i]
+                }
+                else {
+                    odd++
+                    oddW = aa[i];
+                }
+
+            }
+            if (odd < even) {
+                console.log(oddW)
+            }
+            else console.log(evenW)
+
+
+        }
+
+
+        function DidYouMean() {
+            let fruits = ['cherry', 'pineapple', 'melon', 'strawberry', 'raspberry']
+            let word = 'strawbery'
+            let result = 0;
+            var aa = "";
+            for (var i = 0; i < fruits.length; i++) {
+                let letter = fruits[i].split('')
+                let letterthatmatches = 0;
+                for (var j = 0; j < letter.length; j++) {
+                    var count = (word.match(letter[j]) || []).length;
+                    letterthatmatches += count;
+                }
+                if (letterthatmatches > result) {
+                    aa = fruits[i];
+                }
+                result = letterthatmatches
+            }
+            console.log(aa);
+        }
+
+        function FindTheNextPerfectSquare() {
+
+            let talet = 121;
+            let rotenUr = Math.sqrt(talet);
+           
+            if ((rotenUr%1) == 0) {
+                (Math.sqrt(talet) + 1) * (Math.sqrt(talet) + 1)
+            }
+        }
+
+        function CategorizeNewMember() {
+            let s = "ZpglnRxqenU"
+            let number = 1;
+            var result = s.toLowerCase().split('');
+            let result1 = [];
+            for (var i = 0; i < result.length; i++) {
+                let UpperOrLow = 0;
+                for (var j = 0; j < number; j++) {
+
+                    if (UpperOrLow == 0)
+                        result1.push(result[i].toUpperCase())
+                    else
+                        result1.push(result[i])
+                    UpperOrLow++
+                }
+                result1.push('-')
+                number++
+            }
+
+            result1.pop();
+            console.log(result1.join(""))
+        }
+
+        
+    </script>
+
+
+    <script src="squareRoot.js"></script>
+
+
+</body>
+</html>

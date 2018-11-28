@@ -227,3 +227,309 @@ Object reference not set to an instance of an object.
    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/10/2018 4:59:59 PM ******
+
+FIELD POINT OUT OF BOUNDS
+
+
+
+   at OnlineStore.Services.SmhiService.GetMeteorologicalForecast(Decimal longitude, Decimal latitude) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\SmhiService.cs:line 30
+   at OnlineStore.Controllers.WeatherController.GetWeather(WeatherViewModels vm) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\WeatherController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/10/2018 5:02:54 PM ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.SmhiService.GetMeteorologicalForecast(Decimal longitude, Decimal latitude) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\SmhiService.cs:line 30
+   at OnlineStore.Controllers.WeatherController.GetWeather(WeatherViewModels vm) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\WeatherController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/10/2018 5:02:56 PM ******
+
+FIELD POINT OUT OF BOUNDS
+
+
+
+   at OnlineStore.Services.SmhiService.GetMeteorologicalForecast(Decimal longitude, Decimal latitude) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\SmhiService.cs:line 30
+   at OnlineStore.Controllers.WeatherController.GetWeather(WeatherViewModels vm) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\WeatherController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:34:11 AM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:35:57 AM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:37:42 AM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:39:40 AM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:41:14 AM ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 11:42:23 AM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.GetAllListsForBorad(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 34
+   at OnlineStore.Controllers.TrelloController.Board(String id) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:27:01 PM ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 43
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:31:36 PM ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 43
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:33:38 PM ******
+
+Not Found
+
+
+
+   at OnlineStore.Services.HttpServices.Get(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 21
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 43
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:37:02 PM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Post(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 34
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 43
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:40:24 PM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Post(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 34
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 43
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:45:23 PM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Post(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 34
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 42
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:47:18 PM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Post(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 34
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 42
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+
+***** 10/11/2018 2:50:12 PM ******
+
+Unauthorized
+
+
+
+   at OnlineStore.Services.HttpServices.Post(String url) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\HttpServices.cs:line 34
+   at OnlineStore.Services.TrelloService.CreateAcardOnAlist(String trelloListId, String name, String description) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Services\TrelloService.cs:line 42
+   at OnlineStore.Controllers.TrelloController.AddCardForm(AddTrelloPost post) in C:\Users\Administrator\Desktop\GIT-Övningar\OnlineStore\OnlineStore\Controllers\TrelloController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()

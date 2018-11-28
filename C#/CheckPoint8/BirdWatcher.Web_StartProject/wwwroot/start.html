@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>start</title>
+    <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body onpageshow="ShowAllBirds(), ShowAllSpecies()">
+
+
+        <button onclick="recreateDatabase()" id="recreateButton">Recreate database</button>
+        <h3>Add Observation</h3>
+        Specie: <input id="inputAddName" value="" />
+        Date: <input id="inputAddDate" value="2018-05-04 09:00" />
+        Location: <input id="inputAddLocation" value="" />
+        Notes: <input id="inputAddNotes" value="" />
+        <button onclick="Validate()" id="addBird">Add</button>
+
+        <br />
+
+        <h3>Show all observation</h3>
+        <table id="table2">
+            <tr>
+                <th>Specie</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Notes</th>
+            </tr>
+            <table id="table"></table>
+        </table>
+        <br />
+
+        <h3>Species</h3>
+     <div id="species"></div>
+    <button onclick="ShowAllSpecies()" id="species">species</button>
+
+        <script src="/js/main.js"></script>
+    </body>
+</html>

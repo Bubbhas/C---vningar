@@ -16,7 +16,7 @@ namespace OnlineStore.Controllers
         }
         public IActionResult Pow()
         {
-            return Ok("POOOOW");
+            return View();
         }
         public IActionResult TopFive()
         {

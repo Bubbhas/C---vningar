@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="C:\Users\Administrator\Desktop\Skola\GIT-Övningar\jsCodeWars.html" Link="jsCodeWars.html" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
